@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServerQuickStart", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{F4BD6820-784D-4649-98B9-F19D5C0CA7E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientCrendentialConsole", "ClientCrendentialConsole\ClientCrendentialConsole.csproj", "{7FAE031D-C53B-441F-9311-5BCCFF64781D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F4BD6820-784D-4649-98B9-F19D5C0CA7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4BD6820-784D-4649-98B9-F19D5C0CA7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4BD6820-784D-4649-98B9-F19D5C0CA7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FAE031D-C53B-441F-9311-5BCCFF64781D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FAE031D-C53B-441F-9311-5BCCFF64781D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FAE031D-C53B-441F-9311-5BCCFF64781D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FAE031D-C53B-441F-9311-5BCCFF64781D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

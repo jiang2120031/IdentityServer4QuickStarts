@@ -48,7 +48,7 @@ namespace Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
