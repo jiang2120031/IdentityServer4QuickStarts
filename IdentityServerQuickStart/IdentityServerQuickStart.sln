@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServerQuickStart", "IdentityServerQuickStart\IdentityServerQuickStart.csproj", "{938E81A0-209E-407C-AEA7-04CDFB0CE845}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerQuickStart", "IdentityServerQuickStart\IdentityServerQuickStart.csproj", "{938E81A0-209E-407C-AEA7-04CDFB0CE845}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{F4BD6820-784D-4649-98B9-F19D5C0CA7E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{F4BD6820-784D-4649-98B9-F19D5C0CA7E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientCrendentialConsole", "ClientCrendentialConsole\ClientCrendentialConsole.csproj", "{7FAE031D-C53B-441F-9311-5BCCFF64781D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCrendentialConsole", "ClientCrendentialConsole\ClientCrendentialConsole.csproj", "{7FAE031D-C53B-441F-9311-5BCCFF64781D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceOwnerPasswordClient", "ResourceOwnerPasswordClient\ResourceOwnerPasswordClient.csproj", "{1635C19E-4F01-461E-9E5D-162138D21F35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMvc", "WebMvc\WebMvc.csproj", "{BEB14E27-3DBE-44F1-BE9A-548871E03E3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{7FAE031D-C53B-441F-9311-5BCCFF64781D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FAE031D-C53B-441F-9311-5BCCFF64781D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FAE031D-C53B-441F-9311-5BCCFF64781D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1635C19E-4F01-461E-9E5D-162138D21F35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1635C19E-4F01-461E-9E5D-162138D21F35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1635C19E-4F01-461E-9E5D-162138D21F35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1635C19E-4F01-461E-9E5D-162138D21F35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB14E27-3DBE-44F1-BE9A-548871E03E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB14E27-3DBE-44F1-BE9A-548871E03E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB14E27-3DBE-44F1-BE9A-548871E03E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB14E27-3DBE-44F1-BE9A-548871E03E3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
