@@ -18,7 +18,6 @@
     },
     "IdentityServerWithAspNetIdentity": {
       "commandName": "Project",
-      "commandLineArgs": "/seed",
       "launchBrowser": true,
       "launchUrl": "http://localhost:5000",
       "environmentVariables": {

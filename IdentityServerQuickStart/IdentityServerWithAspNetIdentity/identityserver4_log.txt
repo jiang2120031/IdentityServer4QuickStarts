@@ -1,14 +1,1020 @@
-2018-09-22 22:46:09.861 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
-2018-09-22 22:46:09.985 +08:00 [DBG] Using Identity.Application as default scheme for authentication
-2018-09-22 22:46:09.991 +08:00 [DBG] Using Identity.External as default scheme for sign-in
-2018-09-22 22:46:09.992 +08:00 [DBG] Using Identity.External as default scheme for sign-out
-2018-09-22 22:46:09.992 +08:00 [DBG] Using Identity.Application as default scheme for challenge
-2018-09-22 22:46:09.992 +08:00 [DBG] Using Identity.Application as default scheme for forbid
-2018-09-22 22:46:10.512 +08:00 [WRN] Failed to determine the https port for redirect.
-2018-09-22 22:47:14.533 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
-2018-09-22 22:47:14.590 +08:00 [DBG] Using Identity.Application as default scheme for authentication
-2018-09-22 22:47:14.594 +08:00 [DBG] Using Identity.External as default scheme for sign-in
-2018-09-22 22:47:14.594 +08:00 [DBG] Using Identity.External as default scheme for sign-out
-2018-09-22 22:47:14.597 +08:00 [DBG] Using Identity.Application as default scheme for challenge
-2018-09-22 22:47:14.598 +08:00 [DBG] Using Identity.Application as default scheme for forbid
-2018-09-22 22:47:15.025 +08:00 [WRN] Failed to determine the https port for redirect.
+2018-09-24 11:23:33.710 +08:00 [ERR] Failed executing DbCommand (479ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:d0d39e4f-4920-4c4a-ad2c-4e92215b337a
+Error Number:208,State:1,Class:16
+2018-09-24 11:23:33.882 +08:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'IdentityServerWithAspNetIdentity.Data.ApplicationDbContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+ClientConnectionId:d0d39e4f-4920-4c4a-ad2c-4e92215b337a
+Error Number:208,State:1,Class:16
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+ClientConnectionId:d0d39e4f-4920-4c4a-ad2c-4e92215b337a
+Error Number:208,State:1,Class:16
+2018-09-24 11:23:33.988 +08:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'IdentityServerWithAspNetIdentity.Data.ApplicationDbContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+ClientConnectionId:d0d39e4f-4920-4c4a-ad2c-4e92215b337a
+Error Number:208,State:1,Class:16
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+ClientConnectionId:d0d39e4f-4920-4c4a-ad2c-4e92215b337a
+Error Number:208,State:1,Class:16
+2018-09-24 11:46:26.236 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-09-24 11:46:26.284 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-09-24 11:46:26.288 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-09-24 11:46:26.289 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-09-24 11:46:26.289 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-09-24 11:46:26.289 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-09-24 11:46:27.442 +08:00 [WRN] Failed to determine the https port for redirect.
+2018-09-24 11:46:35.377 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:5003
+2018-09-24 11:46:35.381 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 11:46:35.382 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 11:46:35.384 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 11:46:35.522 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 11:46:35.523 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 11:46:35.528 +08:00 [DBG] Start discovery request
+2018-09-24 11:46:35.591 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2018-09-24 11:46:35.598 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2018-09-24 11:46:35.609 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2018-09-24 11:46:35.614 +08:00 [DBG] Start authorize request
+2018-09-24 11:46:35.626 +08:00 [DBG] No user present in authorize request
+2018-09-24 11:46:35.632 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 11:46:35.646 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 11:46:35.695 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 11:46:35.711 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "anonymous",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "1f587236e57f4dc09c4d9fa6d94b40f7",
+  "Nonce": "e6fdfc349d174fa288c5975db9bf8f0c",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "1f587236e57f4dc09c4d9fa6d94b40f7",
+    "nonce": "e6fdfc349d174fa288c5975db9bf8f0c"
+  }
+}
+2018-09-24 11:46:35.722 +08:00 [INF] Showing login: User is not authenticated
+2018-09-24 11:46:35.790 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 11:46:35.791 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 11:46:35.792 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 11:46:35.798 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 11:46:51.993 +08:00 [DBG] CORS request made for path: /account/login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 11:46:54.146 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 11:46:54.146 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 11:46:54.147 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 11:46:54.148 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 11:47:57.484 +08:00 [DBG] CORS request made for path: /account/login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:08:30.052 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-09-24 12:08:30.125 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-09-24 12:08:30.129 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-09-24 12:08:30.130 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-09-24 12:08:30.130 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-09-24 12:08:30.131 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-09-24 12:08:32.282 +08:00 [WRN] Failed to determine the https port for redirect.
+2018-09-24 12:08:43.039 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:5003
+2018-09-24 12:08:43.045 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:08:43.046 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:08:43.049 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:08:43.208 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:08:43.209 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:08:43.214 +08:00 [DBG] Start discovery request
+2018-09-24 12:08:43.279 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2018-09-24 12:08:43.284 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2018-09-24 12:08:43.291 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2018-09-24 12:08:43.296 +08:00 [DBG] Start authorize request
+2018-09-24 12:08:43.306 +08:00 [DBG] No user present in authorize request
+2018-09-24 12:08:43.313 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:08:43.328 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:08:43.378 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:08:43.394 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "anonymous",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "959453117bb24e5894ee8e90f4f50dee",
+  "Nonce": "91dd64d128034053a941818ee0966348",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "959453117bb24e5894ee8e90f4f50dee",
+    "nonce": "91dd64d128034053a941818ee0966348"
+  }
+}
+2018-09-24 12:08:43.405 +08:00 [INF] Showing login: User is not authenticated
+2018-09-24 12:08:43.473 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:08:43.474 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:08:43.475 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:08:43.478 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:00.382 +08:00 [DBG] CORS request made for path: /account/login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:09:01.358 +08:00 [DBG] Augmenting SignInContext
+2018-09-24 12:09:01.361 +08:00 [DBG] Adding idp claim with value: local
+2018-09-24 12:09:01.361 +08:00 [DBG] Adding amr claim with value: pwd
+2018-09-24 12:09:01.362 +08:00 [DBG] Adding auth_time claim with value: 1537762141
+2018-09-24 12:09:01.381 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2018-09-24 12:09:01.428 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:09:01.429 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:09:01.430 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:09:01.436 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:09:01.441 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:09:01.442 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:01.443 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:01.444 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:01.445 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "959453117bb24e5894ee8e90f4f50dee",
+  "Nonce": "91dd64d128034053a941818ee0966348",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "959453117bb24e5894ee8e90f4f50dee",
+    "nonce": "91dd64d128034053a941818ee0966348"
+  }
+}
+2018-09-24 12:09:01.503 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:09:01.504 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:09:01.505 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:09:01.532 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:01.532 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:01.533 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:01.533 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:04.390 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:09:04.427 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:04.428 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:04.428 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:04.447 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:09:04.448 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:09:04.448 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:09:04.448 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:09:04.448 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:09:04.448 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:04.449 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:04.449 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:04.449 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "959453117bb24e5894ee8e90f4f50dee",
+  "Nonce": "91dd64d128034053a941818ee0966348",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "959453117bb24e5894ee8e90f4f50dee",
+    "nonce": "91dd64d128034053a941818ee0966348"
+  }
+}
+2018-09-24 12:09:04.453 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:09:04.454 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:09:04.454 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:09:04.457 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:04.457 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:04.458 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:04.458 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:07.595 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:09:07.644 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:07.644 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:07.645 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:07.649 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:09:07.650 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:09:07.651 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:09:07.651 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:09:07.651 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:09:07.652 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:07.652 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:07.652 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:07.652 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "959453117bb24e5894ee8e90f4f50dee",
+  "Nonce": "91dd64d128034053a941818ee0966348",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "959453117bb24e5894ee8e90f4f50dee",
+    "nonce": "91dd64d128034053a941818ee0966348"
+  }
+}
+2018-09-24 12:09:07.656 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:09:07.656 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:09:07.656 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:09:07.659 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:07.660 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:07.660 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:07.660 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:13.795 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:09:13.798 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:13.798 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:13.798 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:13.802 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:09:13.803 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:09:13.803 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:09:13.803 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:09:13.803 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:09:13.803 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:13.803 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:13.804 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:13.804 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "959453117bb24e5894ee8e90f4f50dee",
+  "Nonce": "91dd64d128034053a941818ee0966348",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "959453117bb24e5894ee8e90f4f50dee",
+    "nonce": "91dd64d128034053a941818ee0966348"
+  }
+}
+2018-09-24 12:09:13.807 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:09:13.807 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:09:13.807 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:09:13.810 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:09:13.811 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:09:13.811 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:09:13.811 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:11:13.921 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-09-24 12:11:13.976 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-09-24 12:11:13.980 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-09-24 12:11:13.981 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-09-24 12:11:13.981 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-09-24 12:11:13.982 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-09-24 12:11:15.806 +08:00 [WRN] Failed to determine the https port for redirect.
+2018-09-24 12:11:24.493 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:5003
+2018-09-24 12:11:24.499 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:11:24.500 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:11:24.503 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:11:24.511 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:11:24.513 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:11:24.518 +08:00 [DBG] Start discovery request
+2018-09-24 12:11:24.613 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2018-09-24 12:11:24.618 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2018-09-24 12:11:24.619 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2018-09-24 12:11:24.627 +08:00 [DBG] Start authorize request
+2018-09-24 12:11:24.640 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:11:24.648 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:11:24.661 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:11:24.710 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:11:24.731 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "1df5a36a00f349f2a20bab786a370a4f",
+  "Nonce": "082bb14e641f414880cbe1a739b264b0",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "1df5a36a00f349f2a20bab786a370a4f",
+    "nonce": "082bb14e641f414880cbe1a739b264b0"
+  }
+}
+2018-09-24 12:11:25.467 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:11:25.468 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:11:25.468 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:11:25.560 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:11:25.561 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:11:25.562 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:11:25.564 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:11:39.281 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:12:46.125 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:12:46.126 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:12:46.127 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:13:44.112 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:13:44.113 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:13:44.114 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:13:44.123 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:13:44.126 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:13:44.127 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:13:44.128 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:13:44.129 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:13:44.129 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "1df5a36a00f349f2a20bab786a370a4f",
+  "Nonce": "082bb14e641f414880cbe1a739b264b0",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "1df5a36a00f349f2a20bab786a370a4f",
+    "nonce": "082bb14e641f414880cbe1a739b264b0"
+  }
+}
+2018-09-24 12:13:44.147 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:13:44.148 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:13:44.148 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:13:44.159 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:13:44.159 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:13:44.160 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:13:44.160 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:13:59.727 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:14:16.656 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:14:16.657 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:14:16.659 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:14:34.631 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:14:34.631 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:14:34.635 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:14:34.635 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:14:34.641 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:14:34.641 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:14:34.641 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:14:34.642 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:14:34.642 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "1df5a36a00f349f2a20bab786a370a4f",
+  "Nonce": "082bb14e641f414880cbe1a739b264b0",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "1df5a36a00f349f2a20bab786a370a4f",
+    "nonce": "082bb14e641f414880cbe1a739b264b0"
+  }
+}
+2018-09-24 12:14:34.651 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:14:34.651 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:14:34.651 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:14:34.655 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:14:34.655 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:14:34.656 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:14:34.656 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:14:38.833 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:14:44.221 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:14:44.221 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:14:44.222 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:14:45.669 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:14:45.669 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:14:45.669 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:14:45.669 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:14:45.670 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:14:45.670 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:14:45.670 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:14:45.670 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:14:45.670 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "1df5a36a00f349f2a20bab786a370a4f",
+  "Nonce": "082bb14e641f414880cbe1a739b264b0",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "1df5a36a00f349f2a20bab786a370a4f",
+    "nonce": "082bb14e641f414880cbe1a739b264b0"
+  }
+}
+2018-09-24 12:14:45.674 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:14:45.674 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:14:45.674 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:14:45.678 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:14:45.678 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:14:45.679 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:14:45.679 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:25:06.032 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-09-24 12:25:06.074 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-09-24 12:25:06.078 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-09-24 12:25:06.078 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-09-24 12:25:06.080 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-09-24 12:25:06.083 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-09-24 12:25:07.366 +08:00 [WRN] Failed to determine the https port for redirect.
+2018-09-24 12:25:16.174 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:25:16.184 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:25:16.192 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:25:16.198 +08:00 [DBG] Start discovery request
+2018-09-24 12:25:20.022 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2018-09-24 12:25:20.033 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2018-09-24 12:25:20.034 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2018-09-24 12:25:20.040 +08:00 [DBG] Start authorize request
+2018-09-24 12:25:20.051 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:25:20.058 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:25:20.078 +08:00 [ERR] client_id is missing or too long
+{
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "RequestedScopes": "",
+  "Raw": {}
+}
+2018-09-24 12:25:20.082 +08:00 [ERR] Request validation failed
+2018-09-24 12:25:20.082 +08:00 [INF] {
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "RequestedScopes": "",
+  "Raw": {}
+}
+2018-09-24 12:36:09.544 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-09-24 12:36:09.587 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-09-24 12:36:09.591 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-09-24 12:36:09.591 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-09-24 12:36:09.591 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-09-24 12:36:09.591 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-09-24 12:36:11.377 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:5003
+2018-09-24 12:36:11.422 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:36:11.445 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:36:11.552 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:36:11.746 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:36:11.747 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:36:11.752 +08:00 [DBG] Start discovery request
+2018-09-24 12:36:11.945 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2018-09-24 12:36:11.999 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2018-09-24 12:36:12.001 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2018-09-24 12:36:12.006 +08:00 [DBG] Start authorize request
+2018-09-24 12:36:12.029 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:36:12.038 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:36:12.066 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:12.157 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:36:12.184 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "782ba5075de64d31b6fbd04021a6c77b",
+  "Nonce": "2e42aa8d3b4e45ab918ec45fed965897",
+  "SessionId": "06c8479eccc82709ab6e8d5065c41d5d",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "782ba5075de64d31b6fbd04021a6c77b",
+    "nonce": "2e42aa8d3b4e45ab918ec45fed965897"
+  }
+}
+2018-09-24 12:36:13.073 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:36:13.074 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:36:13.074 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:36:13.174 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:36:13.175 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:13.176 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:36:13.178 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:20.032 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:5003
+2018-09-24 12:36:20.033 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:36:20.034 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:36:20.035 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:36:20.035 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:36:20.036 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:36:20.037 +08:00 [DBG] Start discovery request
+2018-09-24 12:36:20.048 +08:00 [DBG] Request path /connect/endsession matched to endpoint type Endsession
+2018-09-24 12:36:20.052 +08:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2018-09-24 12:36:20.056 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2018-09-24 12:36:20.066 +08:00 [DBG] Processing signout request for a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:36:20.076 +08:00 [DBG] Start end session request validation
+2018-09-24 12:36:20.089 +08:00 [INF] End session request validation success
+{
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "Raw": {
+    "post_logout_redirect_uri": "http://localhost:5003/index.html"
+  }
+}
+2018-09-24 12:36:20.090 +08:00 [DBG] Success validating end session request from null
+2018-09-24 12:36:21.263 +08:00 [DBG] CORS request made for path: /account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:36:21.346 +08:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2018-09-24 12:36:21.348 +08:00 [INF] AuthenticationScheme: Identity.External signed out.
+2018-09-24 12:36:21.349 +08:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2018-09-24 12:36:21.431 +08:00 [INF] {
+  "Name": "User Logout Success",
+  "Category": "Authentication",
+  "EventType": "Success",
+  "Id": 1002,
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "DisplayName": "Bob Smith",
+  "ActivityId": "0HLH1QT05SI7J:00000005",
+  "TimeStamp": "2018-09-24T04:36:21Z",
+  "ProcessId": 15332,
+  "LocalIpAddress": "::1:5000",
+  "RemoteIpAddress": "::1"
+}
+2018-09-24 12:36:27.264 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:5003
+2018-09-24 12:36:27.264 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:36:27.265 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:36:27.265 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:36:27.265 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:36:27.266 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:36:27.266 +08:00 [DBG] Start discovery request
+2018-09-24 12:36:27.276 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2018-09-24 12:36:27.277 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2018-09-24 12:36:27.277 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2018-09-24 12:36:27.278 +08:00 [DBG] Start authorize request
+2018-09-24 12:36:27.278 +08:00 [DBG] No user present in authorize request
+2018-09-24 12:36:27.278 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:36:27.280 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:27.280 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:36:27.281 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "anonymous",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "5a29e81af2ca4af38e5aa7caf2f4f8e3",
+  "Nonce": "ebb45dc6383d4c48b620ebf3099d6327",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "5a29e81af2ca4af38e5aa7caf2f4f8e3",
+    "nonce": "ebb45dc6383d4c48b620ebf3099d6327"
+  }
+}
+2018-09-24 12:36:27.282 +08:00 [INF] Showing login: User is not authenticated
+2018-09-24 12:36:27.306 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:36:27.307 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:27.308 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:36:27.310 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:43.172 +08:00 [DBG] CORS request made for path: /account/login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:36:43.430 +08:00 [DBG] Augmenting SignInContext
+2018-09-24 12:36:43.433 +08:00 [DBG] Adding idp claim with value: local
+2018-09-24 12:36:43.433 +08:00 [DBG] Adding amr claim with value: pwd
+2018-09-24 12:36:43.433 +08:00 [DBG] Adding auth_time claim with value: 1537763803
+2018-09-24 12:36:43.441 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2018-09-24 12:36:43.453 +08:00 [INF] {
+  "Name": "User Login Success",
+  "Category": "Authentication",
+  "EventType": "Success",
+  "Id": 1000,
+  "Username": "bob",
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "DisplayName": "bob",
+  "Endpoint": "UI",
+  "ActivityId": "0HLH1QT05SI7J:0000000A",
+  "TimeStamp": "2018-09-24T04:36:43Z",
+  "ProcessId": 15332,
+  "LocalIpAddress": "::1:5000",
+  "RemoteIpAddress": "::1"
+}
+2018-09-24 12:36:43.470 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:36:43.471 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:36:43.472 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:36:43.478 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:36:43.483 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:36:43.483 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:36:43.483 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:43.483 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:36:43.484 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "5a29e81af2ca4af38e5aa7caf2f4f8e3",
+  "Nonce": "ebb45dc6383d4c48b620ebf3099d6327",
+  "SessionId": "fe990b010f22e612ff9855073ace177b",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "5a29e81af2ca4af38e5aa7caf2f4f8e3",
+    "nonce": "ebb45dc6383d4c48b620ebf3099d6327"
+  }
+}
+2018-09-24 12:36:43.488 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:36:43.488 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:36:43.488 +08:00 [INF] Showing consent: User has not yet consented
+2018-09-24 12:36:43.499 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:36:43.500 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:43.500 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:36:43.500 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:47.101 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2018-09-24 12:36:53.514 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:36:53.514 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:36:53.515 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:37:04.140 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-09-24 12:37:04.141 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-09-24 12:37:04.141 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-09-24 12:37:04.141 +08:00 [DBG] Start authorize callback request
+2018-09-24 12:37:04.145 +08:00 [DBG] User in authorize request: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:37:04.145 +08:00 [DBG] Start authorize request protocol validation
+2018-09-24 12:37:04.146 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:37:04.146 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-09-24 12:37:04.146 +08:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "AllowedRedirectUris": [
+    "http://localhost:5003/callback.html"
+  ],
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ResponseType": "id_token token",
+  "ResponseMode": "fragment",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile api1",
+  "State": "5a29e81af2ca4af38e5aa7caf2f4f8e3",
+  "Nonce": "ebb45dc6383d4c48b620ebf3099d6327",
+  "SessionId": "fe990b010f22e612ff9855073ace177b",
+  "Raw": {
+    "client_id": "js",
+    "redirect_uri": "http://localhost:5003/callback.html",
+    "response_type": "id_token token",
+    "scope": "openid profile api1",
+    "state": "5a29e81af2ca4af38e5aa7caf2f4f8e3",
+    "nonce": "ebb45dc6383d4c48b620ebf3099d6327"
+  }
+}
+2018-09-24 12:37:04.150 +08:00 [DBG] user_consent grant with value: js|a2b4d923-1829-45b9-a4a0-ea4c8481a80d not found in store.
+2018-09-24 12:37:04.151 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2018-09-24 12:37:04.162 +08:00 [INF] User consented to scopes: ["openid","profile","api1"]
+2018-09-24 12:37:04.174 +08:00 [DBG] Client allows remembering consent, and no scopes provided. Removing consent from consent store for subject: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:37:04.187 +08:00 [DBG] Creating Implicit Flow response.
+2018-09-24 12:37:04.201 +08:00 [DBG] Getting claims for access token for client: js
+2018-09-24 12:37:04.204 +08:00 [DBG] Getting claims for access token for subject: a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:37:04.336 +08:00 [DBG] Getting claims for identity token for subject: a2b4d923-1829-45b9-a4a0-ea4c8481a80d and client: js
+2018-09-24 12:37:04.337 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2018-09-24 12:37:04.364 +08:00 [INF] {
+  "Name": "Token Issued Success",
+  "Category": "Token",
+  "EventType": "Success",
+  "Id": 2000,
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "Endpoint": "Authorize",
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "Scopes": "openid profile api1",
+  "GrantType": "implicit",
+  "Tokens": [
+    {
+      "TokenType": "id_token",
+      "TokenValue": "****Tp5Q"
+    },
+    {
+      "TokenType": "access_token",
+      "TokenValue": "****XI2A"
+    }
+  ],
+  "ActivityId": "0HLH1QT05SI7J:0000000E",
+  "TimeStamp": "2018-09-24T04:37:04Z",
+  "ProcessId": 15332,
+  "LocalIpAddress": "::1:5000",
+  "RemoteIpAddress": "::1"
+}
+2018-09-24 12:37:04.372 +08:00 [INF] Authorize endpoint response
+{
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "ClientId": "js",
+  "RedirectUri": "http://localhost:5003/callback.html",
+  "State": "5a29e81af2ca4af38e5aa7caf2f4f8e3",
+  "Scope": "openid profile api1"
+}
+2018-09-24 12:37:04.389 +08:00 [DBG] Augmenting SignInContext
+2018-09-24 12:37:04.390 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2018-09-24 12:37:04.568 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:5003
+2018-09-24 12:37:04.569 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:37:04.570 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:37:04.570 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:37:04.571 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:37:04.571 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:37:04.571 +08:00 [DBG] Start discovery request
+2018-09-24 12:37:04.595 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration/jwks from origin: http://localhost:5003
+2018-09-24 12:37:04.597 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:37:04.601 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:37:04.602 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2018-09-24 12:37:04.603 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2018-09-24 12:37:04.603 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2018-09-24 12:37:04.611 +08:00 [DBG] Start key discovery request
+2018-09-24 12:37:04.673 +08:00 [DBG] CORS request made for path: /connect/userinfo from origin: http://localhost:5003
+2018-09-24 12:37:04.674 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:37:04.674 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:37:04.680 +08:00 [DBG] CORS request made for path: /connect/userinfo from origin: http://localhost:5003
+2018-09-24 12:37:04.684 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:37:04.684 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:37:04.684 +08:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2018-09-24 12:37:04.686 +08:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2018-09-24 12:37:04.686 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2018-09-24 12:37:04.693 +08:00 [DBG] Start userinfo request
+2018-09-24 12:37:04.699 +08:00 [DBG] Bearer token found in header
+2018-09-24 12:37:05.022 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:37:05.026 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:37:05.033 +08:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2018-09-24 12:37:05.039 +08:00 [DBG] Token validation success
+{
+  "ValidateLifetime": true,
+  "AccessTokenType": "Jwt",
+  "ExpectedScope": "openid",
+  "Claims": {
+    "nbf": 1537763824,
+    "exp": 1537767424,
+    "iss": "http://localhost:5000",
+    "aud": [
+      "http://localhost:5000/resources",
+      "api1"
+    ],
+    "client_id": "js",
+    "sub": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+    "auth_time": 1537763803,
+    "idp": "local",
+    "scope": [
+      "openid",
+      "profile",
+      "api1"
+    ],
+    "amr": "pwd"
+  }
+}
+2018-09-24 12:37:05.050 +08:00 [DBG] Creating userinfo response
+2018-09-24 12:37:05.054 +08:00 [DBG] Scopes in access token: openid profile api1
+2018-09-24 12:37:05.057 +08:00 [DBG] Scopes in access token: openid profile api1
+2018-09-24 12:37:05.060 +08:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2018-09-24 12:37:05.060 +08:00 [DBG] Scopes in access token: openid profile api1
+2018-09-24 12:37:05.077 +08:00 [INF] Profile service returned to the following claim types: sub name given_name family_name website preferred_username
+2018-09-24 12:37:05.078 +08:00 [DBG] End userinfo request
+2018-09-24 12:37:05.113 +08:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2018-09-24 12:37:05.122 +08:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2018-09-24 12:37:05.152 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2018-09-24 12:37:05.189 +08:00 [DBG] Rendering check session result
+2018-09-24 12:37:05.207 +08:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:5003
+2018-09-24 12:37:05.228 +08:00 [DBG] Client list checked and origin: http://localhost:5003 is allowed
+2018-09-24 12:37:05.236 +08:00 [DBG] CorsPolicyService allowed origin: http://localhost:5003
+2018-09-24 12:37:05.241 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:37:05.281 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:37:05.288 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:37:05.314 +08:00 [DBG] Start discovery request
+2018-09-24 12:37:05.350 +08:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2018-09-24 12:37:05.355 +08:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2018-09-24 12:37:05.360 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2018-09-24 12:37:05.398 +08:00 [DBG] Rendering check session result
+2018-09-24 12:38:13.325 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-09-24 12:38:13.330 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-09-24 12:38:13.336 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-09-24 12:38:13.343 +08:00 [DBG] Start discovery request
+2018-09-24 12:38:13.419 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2018-09-24 12:38:13.428 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2018-09-24 12:38:13.434 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2018-09-24 12:38:13.441 +08:00 [DBG] Start key discovery request
+2018-09-24 12:38:15.142 +08:00 [DBG] Request path /connect/endsession matched to endpoint type Endsession
+2018-09-24 12:38:15.146 +08:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2018-09-24 12:38:15.155 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2018-09-24 12:38:15.167 +08:00 [DBG] Processing signout request for a2b4d923-1829-45b9-a4a0-ea4c8481a80d
+2018-09-24 12:38:15.171 +08:00 [DBG] Start end session request validation
+2018-09-24 12:38:15.189 +08:00 [DBG] Start identity token validation
+2018-09-24 12:38:15.194 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:38:15.199 +08:00 [DBG] Client found: js / JavaScript Client
+2018-09-24 12:38:15.214 +08:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2018-09-24 12:38:15.220 +08:00 [DBG] Token validation success
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "ValidateLifetime": false,
+  "Claims": {
+    "nbf": 1537763824,
+    "exp": 1537764124,
+    "iss": "http://localhost:5000",
+    "aud": "js",
+    "nonce": "ebb45dc6383d4c48b620ebf3099d6327",
+    "iat": 1537763824,
+    "at_hash": "r9F9AH7x6xLNC71zA9YIxg",
+    "sid": "fe990b010f22e612ff9855073ace177b",
+    "sub": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+    "auth_time": 1537763803,
+    "idp": "local",
+    "amr": "pwd"
+  }
+}
+2018-09-24 12:38:15.245 +08:00 [INF] End session request validation success
+{
+  "ClientId": "js",
+  "ClientName": "JavaScript Client",
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "PostLogOutUri": "http://localhost:5003/index.html",
+  "Raw": {
+    "id_token_hint": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg2ODY5NTdjZDE2YTU0NDYwMjI0YWU3NDI2MTA1NDlkIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1Mzc3NjM4MjQsImV4cCI6MTUzNzc2NDEyNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoianMiLCJub25jZSI6ImViYjQ1ZGM2MzgzZDRjNDhiNjIwZWJmMzA5OWQ2MzI3IiwiaWF0IjoxNTM3NzYzODI0LCJhdF9oYXNoIjoicjlGOUFIN3g2eExOQzcxekE5WUl4ZyIsInNpZCI6ImZlOTkwYjAxMGYyMmU2MTJmZjk4NTUwNzNhY2UxNzdiIiwic3ViIjoiYTJiNGQ5MjMtMTgyOS00NWI5LWE0YTAtZWE0Yzg0ODFhODBkIiwiYXV0aF90aW1lIjoxNTM3NzYzODAzLCJpZHAiOiJsb2NhbCIsImFtciI6WyJwd2QiXX0.Ig1oimkGDo9XlyTvcp3v0TNayqKAP-s4hNP0NpIbgWK6o_UhJh3jFtcX1fqKeKs3T_TKFrsi3VDHooY8g4MoTKsKcxzoeT4HNSTrcOqipZoKF41YmOQh6DPwwZdSupF5LQGxandzTgOCg7DIhkA3Ofgm6GEG4kJWIliRcBLgHT2riMwhkZ-oju_SMpcJWAF5rT6EOOavi25dDQXMima7DNJOxd8QYS8EZKedkAVuK5Q-4v_NJ_ugc8LqTexgcfLot6L_SvMNuQFbYuqBEO8k-FVYqSwK0BDws5ip1DvHTR4RpauiMAw0K6VBYEmpu2XBeS9oXcQYp-MtSRE0_oTp5Q",
+    "post_logout_redirect_uri": "http://localhost:5003/index.html"
+  }
+}
+2018-09-24 12:38:15.270 +08:00 [DBG] Success validating end session request from js
+2018-09-24 12:38:15.295 +08:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2018-09-24 12:38:15.300 +08:00 [INF] AuthenticationScheme: Identity.External signed out.
+2018-09-24 12:38:15.305 +08:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2018-09-24 12:38:15.311 +08:00 [INF] {
+  "Name": "User Logout Success",
+  "Category": "Authentication",
+  "EventType": "Success",
+  "Id": 1002,
+  "SubjectId": "a2b4d923-1829-45b9-a4a0-ea4c8481a80d",
+  "DisplayName": "Bob Smith",
+  "ActivityId": "0HLH1QT05SI7I:00000004",
+  "TimeStamp": "2018-09-24T04:38:15Z",
+  "ProcessId": 15332,
+  "LocalIpAddress": "::1:5000",
+  "RemoteIpAddress": "::1"
+}
+2018-09-24 12:38:15.380 +08:00 [DBG] Request path /connect/endsession/callback matched to endpoint type Endsession
+2018-09-24 12:38:15.387 +08:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionCallbackEndpoint
+2018-09-24 12:38:15.419 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionCallbackEndpoint for /connect/endsession/callback
+2018-09-24 12:38:15.439 +08:00 [DBG] Processing signout callback request
+2018-09-24 12:38:15.469 +08:00 [DBG] client configuration validation for client js succeeded.
+2018-09-24 12:38:15.474 +08:00 [DBG] No client front-channel logout URLs
+2018-09-24 12:38:15.479 +08:00 [DBG] No client back-channel logout URLs
+2018-09-24 12:38:15.483 +08:00 [INF] Successful signout callback.
+2018-09-24 12:38:15.489 +08:00 [DBG] No client front-channel iframe urls
+2018-09-24 12:38:15.493 +08:00 [DBG] No client back-channel iframe urls
