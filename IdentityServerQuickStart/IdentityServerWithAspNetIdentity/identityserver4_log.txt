@@ -1,0 +1,14 @@
+2018-09-22 22:46:09.861 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-09-22 22:46:09.985 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-09-22 22:46:09.991 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-09-22 22:46:09.992 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-09-22 22:46:09.992 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-09-22 22:46:09.992 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-09-22 22:46:10.512 +08:00 [WRN] Failed to determine the https port for redirect.
+2018-09-22 22:47:14.533 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-09-22 22:47:14.590 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-09-22 22:47:14.594 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-09-22 22:47:14.594 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-09-22 22:47:14.597 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-09-22 22:47:14.598 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-09-22 22:47:15.025 +08:00 [WRN] Failed to determine the https port for redirect.
