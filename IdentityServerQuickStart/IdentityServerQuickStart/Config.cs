@@ -62,7 +62,16 @@ namespace IdentityServerQuickStart
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "api1" }
+                    //AllowedScopes = { "api1" },
+                    AllowedScopes = new List<string>
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "api1"
+                    },
+
+
+                    AllowOfflineAccess = true
                 },
                  // OpenID Connect implicit flow client (MVC)
                 new Client
