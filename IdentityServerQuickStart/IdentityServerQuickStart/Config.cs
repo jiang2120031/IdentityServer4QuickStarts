@@ -148,7 +148,30 @@ namespace IdentityServerQuickStart
                         new Claim("name", "Alice"),
                         new Claim("website", "https://alice.com")
                     }
-                }
+                },
+                new TestUser
+                {
+                    SubjectId = "3",
+                    Username = "des",
+                    Password = "des",
+                    Claims = new List<Claim>
+                    {
+                        new Claim("name", "desean"),
+                        new Claim("website", "https://alice.com")
+                    }
+                },
+                new TestUser
+                {
+                    SubjectId = "4",
+                    Username = "pab",
+                    Password = "pab",
+                    Claims = new List<Claim>
+                    {
+                        new Claim("name", "Pablo"),
+                        new Claim("website", "https://alice.com")
+                    }
+                },
+
             };
         } 
         #endregion
