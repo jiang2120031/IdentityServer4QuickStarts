@@ -117,7 +117,8 @@ namespace IdentityServerQuickStart
                         IdentityServerConstants.StandardScopes.Profile,
                         "api1"
                     }
-                }
+                },
+               
             };
         } 
         #endregion
@@ -171,6 +172,28 @@ namespace IdentityServerQuickStart
                         new Claim("website", "https://alice.com")
                     }
                 },
+                new TestUser
+                {
+                    SubjectId = "5",
+                    Username = "PedroFilburn",  
+                    Password = "123456",
+                    Claims = new List<Claim>
+                    {
+                        new Claim("name", "Client Pedro Filburn"),
+                        new Claim("website", "https://alice.com")
+                    }
+                },
+                new TestUser
+                {
+                    SubjectId = "6",
+                    Username = "JakeCalicott",
+                    Password = "123456",
+                    Claims = new List<Claim>
+                    {
+                        new Claim("name", "Jake Calicott Staff"),
+                        new Claim("website", "https://alice.com")
+                    }
+                }
 
             };
         } 
